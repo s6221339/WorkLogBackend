@@ -43,7 +43,7 @@ public class CustomerServiceImpl implements CustomerService
 			CustomerWithProjectVO vo = new CustomerWithProjectVO(cusId, cusName, projList);
 			infoList.add(vo);
 		}
-		infoList.sort((o1, o2) -> o2.customerId().compareTo(o1.customerId()));
+		infoList.sort((o1, o2) -> o1.customerId().compareTo(o2.customerId()));
 		return new ProjectCustomerInfoResponse(ResponseMessages.SUCCESS, infoList);
 	}
 
